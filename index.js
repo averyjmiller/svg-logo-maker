@@ -1,21 +1,19 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateSVG = require('./lib/generateSVG.js');
+const generateLogo = require('./lib/generateLogo.js');
 const prompts = require('./lib/prompts.js');
 
 function writeToFile(fileName, data) {
-  // fs.writeFile(fileName, generateSVG(data), (err) => 
-  //   err ? console.log(err) : console.log('Generated logo.svg')
-  // );
-  console.log(fileName);
-  console.log(data);
+  fs.writeFile(fileName, generateLogo(data), (err) => 
+    err ? console.log(err) : console.log('Generated logo.svg')
+  );
 }
 
 function init() {
   inquirer
   .prompt(prompts)
   .then((response) => {
-    writeToFile("logo.svg", response);
+    writeToFile("./examples/logo.svg", response);
   })
   .catch((err) => {
     if(err.isTtyError) {
