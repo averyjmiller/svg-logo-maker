@@ -19,6 +19,8 @@ A Node.js command-line application that takes in user input to generate a logo a
 ## Usage
 Run `node index.js` to run the application.
 
+https://github.com/averyjmiller/svg-logo-maker/assets/54604339/e259a058-b46d-4f32-a2c4-55f051afc5cc
+
 ## License
 This repository is covered under MIT License. For more information, check the `LICENSE` file.
 
